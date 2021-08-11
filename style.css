@@ -1,0 +1,459 @@
+/* ----- сброс ----- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, 
+sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, 
+table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, 
+details, figcaption, figure, footer, header, hgroup, menu, nav, 
+section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align: baseline;
+	background: transparent;
+	outline: none;
+}
+table {						/* устраняем отступы между ячейками таблицы */
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+td, td img {
+	vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+} 
+input, select, button, textarea {
+	margin: 0; 				/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+	font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+	outline: none;
+}
+input[type="text"], input[type="password"], textarea {
+	padding: 0; 				/* убираем внутренние отступы для текстовых полей */
+}
+input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+	vertical-align: bottom;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+nav ul {
+	 list-style:none;
+}
+/* ----- /сброс ----- */
+
+/* ----- базовые настройки ----- */
+html {
+	min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+body {
+	text-align: left;
+	font-size: 0.9375em; /* используем безопасные шрифтовые CSS стеки */
+	min-height: 100%;
+	font-family: 'Roboto', sans-serif;
+}
+a, a:visited { /* порядок правил для ссылок имеет значение */
+	text-decoration: underline;
+}
+a:hover {
+	text-decoration:none;
+}
+a:focus, a:active {
+	text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:normal;
+}
+img{
+	max-width:100%;
+}
+section{
+	max-width:100%;
+}
+.clr{
+	clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+/*header*/
+
+.main-top{
+
+}
+#menu-fix{
+	position: fixed;
+	top: 0;
+	max-width: 100%;
+	background: #fff;
+	box-shadow: 0 1px 5px rgba(0,0,0, .10);
+}
+.head-menu{
+	display: flex;
+	justify-content: center;
+	max-width: 1200px;
+	width: 100%;
+}
+.head-menu nav ul{
+	display: flex;
+	justify-content: space-between;
+	
+}
+.head-menu a{
+	text-decoration: none;
+	color: #181818;
+	font-size: 14px;
+}
+.activ a{
+	color: #1d1e1f; 
+	font-weight: 700;
+}
+.head-menu__item{
+ 	width: 20%;
+}
+.logo{
+	padding: 4px 57px 0 57px;
+}
+.head-menu__text{
+	margin-top: 20px;
+}
+
+.main-title{
+	text-align: center;
+	margin-top: 302px; 
+}
+.main-title h1{
+	font-size: 44px;
+	color: #1d1e1f;
+}
+.main-title p{
+	font-size: 16px;
+	color: #989696;
+	margin-top: 16px;
+}
+.button{
+	margin-top: 70px;
+	margin-bottom: 286px;
+}
+.button-head{
+	text-transform: uppercase;
+	text-decoration: none;
+	border: 1px solid #1d1e1f;
+	color: #1d1e1f;
+	padding: 25px 45px;
+}
+.scroll{
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	margin-bottom: 10px;
+	margin: 0 auto;
+
+}
+.scroll-first{
+	margin-bottom: 10px;
+	background-color: #f0f0f0;
+}
+.scroll-second{
+	margin-bottom: 10px;
+	background-color: #e0e0e0;
+}
+.scroll-third{
+	margin-bottom: 75px;
+	background-color: #d0d0d0;
+}
+.info{
+	background: url(images/bginfo.jpg) center top no-repeat;
+}	
+#info-item{
+	display: grid;
+	grid-template-columns: 42% 16% 42%;
+}
+.info-item__left{
+	text-align: right;
+	margin-top: 140px;
+}
+.info-item__right{
+	text-align: left;
+	margin-top: 265px;
+}
+.info-item__center{
+	margin: 0 auto;
+}
+.line-1{
+	margin: 0 auto;
+	height: 150px;
+	width: 5px;
+	background-color: #fff;
+}
+.circle-1{
+	margin: 0 auto;
+	height: 20px;
+	width: 20px;
+	border: 5px solid #fff;
+	border-radius: 100%;
+}
+.line-3{
+	margin: 0 auto;
+	height: 97px;
+	width: 5px;
+	background-color: #fff;
+}
+.line-4{
+	margin: 0 auto;
+	height: 210px;
+	width: 5px;
+	background-color: #fff;
+}
+.circle-2{
+	margin: 0 auto;
+	height: 48px;
+	width: 48px;
+	border: 5px solid #fff;
+	border-radius: 100%;
+}
+.line-5{
+	margin: 0 auto;
+	height: 195px;
+	width: 5px;
+	background-color: #fff;
+}
+.line-6{
+	margin: 0 auto;
+	height: 360px;
+	width: 5px;
+	background-color: #fff;
+	padding-bottom: 210px;
+}
+.info-item__left, .info-item__right h2{
+	font-size: 48px;
+	color: #fff;
+}
+.info-item__left p{
+	margin-top: 31px;
+	font-size: 15px;
+	color: #b7b7b7;
+	margin-bottom: 245px;
+}
+
+.info-item__right p{
+	margin-top: 31px;
+	font-size: 15px;
+	color: #b7b7b7;
+	margin-bottom: 355px;
+}
+
+
+/*our team*/
+
+#our-team{
+
+}
+.our-team__title{
+	text-align: center;
+}
+.our-team__title h3{
+	margin: 86px 0 11px 0;
+	font-size: 34px;
+	color: #1d1e1f;
+}
+.our-team__title p{
+	font-size: 16px;
+	color: #989696;
+	margin-bottom: 130px;
+}
+.our-team__item{
+	display: flex;
+	justify-content: space-between;
+	max-width: 80%;
+}
+.our-team__item{
+	margin: 0 auto;
+}
+.element{
+	text-align: center;
+	width: 33%;
+}
+.our-team__item h4{
+	margin-top: 30px;
+	font-size: 24px;
+	color: #464646;
+}
+.our-team__item p{
+	margin-top: 13px;
+	margin-bottom: 30px;
+	font-size: 13px;
+	color: #b3b3b3;
+}
+.our-team__icons img{
+	padding: 0px 5px;
+	margin-bottom: 85px;
+}
+.our-team__item-1, .our-team__item-3{
+	margin-top: 93px;
+}
+
+
+/*services*/
+
+
+#services{
+	background: url(images/bgsevices.png) center top no-repeat;
+	padding-bottom: 300px;
+}
+.services__title{
+	text-align: center;
+	padding: 255px 0 220px 0;
+}
+.services__title h3{
+	font-size: 34px;
+	color: #fff;
+}
+.services__title p{
+	font-size: 16px;
+	color: #777777;
+	margin-top: 11px;
+}
+.my-services{
+	display: flex;
+	justify-content: space-around;
+}
+.my-services__item{
+	text-align: center;
+}
+.my-services__item h4{
+	font-size: 26px;
+	color: #fff;
+	margin-top: 44px;
+}
+.my-services__item p{
+	font-size: 18px;
+	color: #777777;
+	margin-top: 40px;
+	margin-bottom: 450px;
+}
+#services-button{
+	margin: 0 auto;
+	padding: 26px 0;
+	text-align: center;
+	width: 217px;
+	background: #fff;
+}
+#services-button a{
+	font-size: 16px;
+	color: #000;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+/*contact us*/
+
+#contac{
+	max-width: 1200px;
+	width: 100%;
+	margin: 90px auto 0 auto;
+	text-align: center;
+}
+.contac-title{
+	text-align: center;
+}
+.contac-title h3{
+	font-size: 34px;
+	color: #1d1e1f;
+}
+.contac-title p{
+	font-size: 16px;
+	color: #989696;
+	margin: 11px 0 65px 0;
+}
+.contact-info{
+	display: flex;
+	justify-content: center;
+}
+.contact-info__item{
+	text-align: center;
+	width: 25%;
+}
+.contact-info__item h4{
+	font-size: 14px;
+	color: #898888;
+	margin-top: 17px;
+	margin-bottom: 150px;
+}
+
+/*форма*/
+
+.my-form{
+	font-size: 15px;
+	color: #898888;
+	text-align: center;
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+}
+.form-name{
+	text-align: center;
+	margin-bottom: 23px;
+	height: 60px;
+	width: 58%;
+	border: 1px solid #898888;
+}
+.form-email{
+	text-align: center;
+	margin-bottom: 23px;
+	height: 60px;
+	width: 58%;
+	border: 1px solid #898888;
+}
+.form-tel{
+	text-align: center;
+	margin-bottom: 23px;
+	height: 60px;
+	width: 58%;
+	border: 1px solid #898888;
+}
+.form-textarea{
+	margin-bottom: 23px;
+	height: 215px;
+	width: 58%;
+	border: 1px solid #898888;
+}
+.form-submit{
+	text-align: center;
+	height: 60px;
+	width: 58%;
+	color: #fff;
+	border: none;
+	background: #161616;
+}
+/*footer*/
+.footer{
+	margin-top: 55px;
+	margin-bottom: 55px;
+	text-align: center;
+	
+}
+.footer a{
+	font-size: 14px;
+	color: #3b3b3b;
+	text-decoration: none;
+}
